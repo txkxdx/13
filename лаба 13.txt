@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+#include <Windows.h>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	char symbol = 0;
+	int x;
+	int y;
+	int size;
+	int typeoffigure;
+	int texture;
+
+
+		cout << "[+] Геометрические фигуры" << endl;
+		cout << "[1] Линия \n";
+		cout << "[2] Квадрат \n";
+		cout << "[+] Выберите фигуру: "; cin >> typeoffigure;
+
+		system("cls");
+
+		if (typeoffigure == 1) {
+			cout << "Выберите текстуру фигуры: "; cin >> symbol;
+			cout << endl;
+			cout << "Выберите размер фигуры: "; cin >> size;
+			for (int x = 0; x < size; x++) {
+				cout << symbol;
+			}
+		}
+
+		else {
+			cout << "Выберите текстуру фигуры: "; cin >> symbol;
+			cout << endl;
+			cout << "Выберите размер фигуры: "; cin >> size;
+
+			for (int x = 1; x <= size; x++) {
+				for (int y = 1; y <= size; y++) {
+					if (x != 0) {
+						cout << symbol;
+					}					
+				}
+				cout << endl;
+			}
+
+
+
+
+		}
